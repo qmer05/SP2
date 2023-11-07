@@ -1,14 +1,14 @@
 public abstract class ACar implements Car {
 
-    protected String registrationNumber;
+    private String registrationNumber;
 
-    protected String make;
+    private String make;
 
-    protected String model;
+    private String model;
 
-    protected int numberOfDoors;
+    private int numberOfDoors;
 
-    public ACar(){
+    public ACar(String registrationNumber, String make, String model, int numberOfDoors){
         this.registrationNumber = registrationNumber;
         this.make = make;
         this.model = model;
