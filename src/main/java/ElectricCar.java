@@ -1,6 +1,6 @@
 public class ElectricCar extends ACar {
-    double batteryCapacity;
-    double maxRange;
+    int batteryCapacity;
+    int maxRange;
 
     public ElectricCar(String registrationNumber, String make, String model, int numberOfDoors, int batteryCapacity, int maxRange) {
         super(registrationNumber, make, model, numberOfDoors);
@@ -11,7 +11,7 @@ public class ElectricCar extends ACar {
     @Override
     public int getRegistrationFee() {
 
-        double kmPrL = (getWhPrKm() / 91.25) / 100;
+        int kmPrL = (int) (100 / (getWhPrKm() / 91.25));
 
         if (kmPrL >= 20 && kmPrL < 50) {
             return 330;
@@ -26,23 +26,16 @@ public class ElectricCar extends ACar {
         } else return 0;
     }
 
-    /*
-    For en Elbil gælder de samme regler som for en benzinbil, blot skal man først
-    omregne watt-timer pr kilometer til km/l. Det gøres ved at dividere Wh/km med 91,25
-    og dernæst dividere 100 med dette tal.
-
-     */
-
-    public double getBatteryCapacityKWh() { // returns the battery capacity in kilowatt hours
+    public int getBatteryCapacityKWh() { // returns the battery capacity in kilowatt hours
         return batteryCapacity;
     }
 
-    public double getMaxRangeKm() { // returns the maximum range in kilometres.
+    public int getMaxRangeKm() { // returns the maximum range in kilometres.
         return maxRange;
     }
 
-    public double getWhPrKm() { // returns the power consumption in watt hours per driven kilometre.
-        return (maxRange/batteryCapacity * 1000);
+    public int getWhPrKm() { // returns the power consumption in watt hours per driven kilometre.
+        return batteryCapacity * 1000 / maxRange;
     }
 
     public String toString() {
@@ -50,5 +43,4 @@ public class ElectricCar extends ACar {
                 + numberOfDoors + "\nBattery capacity: " + batteryCapacity + "\nMax range km: " + maxRange
                 + "\nWatt hours pr km: " + getWhPrKm() + "\nRegistration fee: " + getRegistrationFee() + " DKK" + "\n";
     }
-
 }

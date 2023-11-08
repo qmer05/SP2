@@ -8,5 +8,4 @@ public interface Car {
     public int getNumberOfDoors(); // The number of doors
 
     public int getRegistrationFee(); // Calculates the registration fee for the car
-
 }

@@ -1,6 +1,5 @@
 public class GasolineCar extends AFuelCar {
 
-
     public GasolineCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre) {
         super(registrationNumber, make, model, numberOfDoors, kmPrLitre);
     }
@@ -27,9 +26,9 @@ public class GasolineCar extends AFuelCar {
     }
 
     @Override
-    public String toString(){
-        return "Reg. nr: "+registrationNumber+"\nMake: "+ make +"\nModel: "+model+"\nNumber of doors: "
-                +numberOfDoors+"\nFuel type: "+getFuelType()+"\nKm pr litre: "+kmPrLitre+"\nRegistraton fee: "
-                +getRegistrationFee()+" DKK"+"\n";
+    public String toString() {
+        return "Reg. nr: " + registrationNumber + "\nMake: " + make + "\nModel: " + model + "\nNumber of doors: "
+                + numberOfDoors + "\nFuel type: " + getFuelType() + "\nKm pr litre: " + kmPrLitre + "\nRegistraton fee: "
+                + getRegistrationFee() + " DKK" + "\n";
     }
 }

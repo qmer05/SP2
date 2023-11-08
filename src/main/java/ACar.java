@@ -33,5 +33,4 @@ public abstract class ACar implements Car {
     public String toString() {
         return registrationNumber + make + model + numberOfDoors;
     }
-
 }
