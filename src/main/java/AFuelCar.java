@@ -15,7 +15,8 @@ public abstract class AFuelCar extends ACar {
 
     @Override
     public String toString(){
-        return "Reg. nr: "+registrationNumber+"\nMake: "+ make +"\nModel: "+model+"\nNumber of doors: "+numberOfDoors+"\nKm pr litre: "+kmPrLitre;
+        return "Reg. nr: "+registrationNumber+"\nMake: "+ make +"\nModel: "+model+"\nNumber of doors: "
+                +numberOfDoors+"\nKm pr litre: "+kmPrLitre;
     }
 
 }

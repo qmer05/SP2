@@ -29,7 +29,7 @@ public class DieselCar extends AFuelCar {
             totalFee = 10470 + 15260;
         }
 
-        if (!hasParticleFilter) {
+        if (hasParticleFilter() == false) {
             return totalFee + 1000;
         } else {
             return totalFee;
@@ -37,13 +37,13 @@ public class DieselCar extends AFuelCar {
     }
 
     public boolean hasParticleFilter() {
-        return true;
+        return hasParticleFilter;
     }
 
     @Override
     public String toString() {
         return "Reg. nr: " + registrationNumber + "\nMake: " + make + "\nModel: " + model + "\nNumber of doors: "
                 + numberOfDoors + "\nKm pr litre: " + kmPrLitre + "\nHas particle filter: " + hasParticleFilter
-                + "\nFuel Type: " + getFuelType() + "\nRegistration fee: " + getRegistrationFee() + " DKK";
+                + "\nFuel Type: " + getFuelType() + "\nRegistration fee: " + getRegistrationFee() + " DKK"+"\n";
     }
 }
